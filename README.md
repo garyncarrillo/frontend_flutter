@@ -16,6 +16,10 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
 
 
+# this app was build with visual studio code
+- ctrl + 9 new project
+- ctr + p flutter launch emulator
+- run with f5 while in the main.dart file
 
-cmd + P
-flutter launch emulator
+# Add API_URL
+api_url.dart
