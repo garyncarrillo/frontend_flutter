@@ -1,9 +1,10 @@
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'api_url.dart';
 
 class AuthService {
-  String apiUrl = "https://7f6d-190-84-116-10.ngrok-free.app";
+  String apiUrl = ApiUrl.apiUrl;
 
   Future<Map<String, dynamic>> login(String email, String password) async {
     try {
@@ -19,7 +20,7 @@ class AuthService {
         },
         body: jsonBody,
       );
-      
+
       if (response.statusCode == 200) {
         Map<String, dynamic> responseBody = jsonDecode(response.body);
         String jwt = responseBody['jwt'];

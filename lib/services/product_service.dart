@@ -3,9 +3,10 @@ import 'dart:convert';
 import 'product.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import './product_response.dart';
+import 'api_url.dart';
 
 class ProductService {
-  final String apiUrl = "https://7f6d-190-84-116-10.ngrok-free.app";
+  String apiUrl = ApiUrl.apiUrl;
 
   Future<List<Product>> getProducts() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
